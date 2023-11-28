@@ -1,7 +1,7 @@
 body {
   position: absolute;
   margin: 0 8px;
-  width: 100%;
+  max-width: 100vw;
 }
 
 img {
@@ -45,8 +45,7 @@ button:hover {
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  flex-basis: calc((100% - 60px) / 3);
+  flex-wrap: wrap;  
   justify-content: center;
   gap: 30px;
   margin-top: 80px;
@@ -57,10 +56,10 @@ button:hover {
 .item {
   display: flex;
   flex-direction: column;
+  flex-basis: calc((100% - 60px) / 3);
   justify-content: space-between;
   text-align: center;
-  height: 250px;
-  width: 300px;
+  height: 250px;  
   padding: 7px;
   text-decoration: none;
   color: black;

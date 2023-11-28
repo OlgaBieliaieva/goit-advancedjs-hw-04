@@ -16,12 +16,11 @@ export async function getImages(value) {
     REQUEST_OPTIONS.q = value;
     REQUEST_OPTIONS.page = 1;
   }
+
   const options = new URLSearchParams(REQUEST_OPTIONS);
-  try {
-    const response = await axios.get(`${BASE_URL}${options}`);
-    REQUEST_OPTIONS.page += 1;
-    return response;
-  } catch (error) {
-    console.log(error);
-  }
+  const response = await axios.get(`${BASE_URL}${options}`);
+
+  REQUEST_OPTIONS.page += 1;
+
+  return response.data;
 }
